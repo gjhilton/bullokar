@@ -10,6 +10,13 @@
 Leech, John, 1565-1650?. <cite>Certaine Grammar Questions for the Exercise of Young Schollers in the Learning of the Accidence</cite>. London: 1590. https://www.proquest.com/books/certaine-grammar-questions-exercise-young/docview/2240914814/se-2. B4
 </figcaption>
 
-This project was bootstrapped using the method at https://medium.com/@Mr_Pepe/setting-your-python-project-up-for-success-in-2024-365e53f7f31e
+This project was bootstrapped using the method at https://code.visualstudio.com/docs/python/python-tutorial
 
+To run: 
+
+```
+source venv/bin/activate  
+```
+
+or  cmd + shift + p > Python: Create terminal
 
