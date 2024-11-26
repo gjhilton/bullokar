@@ -6,7 +6,7 @@ import json
 
 ROLE = "You are a natural language processor which finds adjectives and the nouns they describe."  
 
-PROMPT = "Find all the non-quantitative adjectives in the following text and the nouns which they describe. Organise your results so that only unique nouse are returned, plus a kist of all the adjectives which descibe them. The text is: "
+PROMPT = "Find all the adjectives in the following text and the nouns which they describe. Discard all qantitative adjectives. Discard all possessive adjectives. Discard all nous with zero adjectives. Organise your results so that only unique nouse are returned, plus a kist of all the adjectives which descibe them. The text is: "
 
 class Result(BaseModel):
     noun: str
@@ -68,10 +68,10 @@ def process(filename, including):
 if __name__ == "__main__":
     filename = "./src/PROB 11_609_123.txt"
     including = [
-        # (
-        #     "the vicarage at Bexley",
-        #     "to be equally parted between her and my Nephew Mr Thomas Knipe",
-        # ),
+        (
+            "the vicarage at Bexley",
+            "to be equally parted between her and my Nephew Mr Thomas Knipe",
+        ),
         ("I give her my six", "Gold shoes"),
     ]
     json_obj = (process(filename, including))
